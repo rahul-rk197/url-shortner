@@ -6,8 +6,8 @@ function UrlInput(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(ab.r + 1);
     let ab ={};
+    console.log(ab.r + 1);
     setLoading(true);
     try {
       fetch(`https://api.shrtco.de/v2/shorten?url=${url}`).then((response) => {
