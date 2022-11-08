@@ -1,16 +1,7 @@
 import React, { useState } from 'react'
 import UrlInput from './Components/UrlInput';
 import UrlOutputs from './Components/UrlOutputs';
-
-import ReactGA from "react-ga";
-
-const useAnalyticsEventTracker = (category="Blog category") => {
-  const eventTracker = (action = "test action", label = "test label") => {
-    ReactGA.event({category, action, label});
-  }
-  return eventTracker;
-}
-
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 function Home() {
     const [shortUrls, setShortUrls] = useState([])
     const gaEventTracker = useAnalyticsEventTracker('URL Shorten');
